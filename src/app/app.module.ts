@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { RegisterComponent } from './register/register.component';
 import { ReportingComponent } from './reporting/reporting.component';
+import {HttpClientModule} from '@angular/common/http';
+import { EditAccountComponent } from './edit-account/edit-account.component';
+import { AddAccountComponent } from './add-account/add-account.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,13 +21,18 @@ import { ReportingComponent } from './reporting/reporting.component';
     HomeComponent,
     AccountListComponent,
     RegisterComponent,
-    ReportingComponent
+    ReportingComponent,
+    EditAccountComponent,
+    AddAccountComponent
     
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

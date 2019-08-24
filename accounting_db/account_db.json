@@ -1,0 +1,50 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "code": "101000",
+      "label": "Capital Propre",
+      "total_credit": 0,
+      "total_debit": 0
+    },
+    {
+      "code": "20002",
+      "label": "Immobilisation",
+      "id": 2
+    },
+    {
+      "code": "30003",
+      "label": "Marchandises",
+      "id": 3
+    },
+    {
+      "code": "411000",
+      "label": "Client",
+      "id": 4
+    },
+    {
+      "code": "4000000",
+      "label": "Fournisseurs",
+      "id": 5
+    },
+    {
+      "code": "530000",
+      "label": "Caisse",
+      "id": 6
+    },
+    {
+      "code": "540000",
+      "label": "Banque",
+      "id": 7
+    }
+  ],
+  "records": [
+    {
+      "id": 1,
+      "operation_date": "01/04/2019",
+      "piece": "1",
+      "operation label": "blabal",
+      "account": "1"
+    }
+  ]
+}

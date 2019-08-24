@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'account_list', component: AccountListComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reporting', component: ReportingComponent },
+  { path: '**' , redirectTo: 'home', pathMatch: 'full'}
 
 ];
 

@@ -15,22 +15,22 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/account_list">Account List</a>
+                <a class="nav-link" [routerLink]="['account_list']">Account List</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/register">Register</a>
+                <a class="nav-link" [routerLink]="['register']">Register</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/reporting">Reporting</a>
+                <a class="nav-link" [routerLink]="['reporting']">Reporting</a>
             </li>
         </ul>
         </div>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn  my-2 my-sm-0" type="submit">Search</button>
         </form>
   </div>
 </nav>
