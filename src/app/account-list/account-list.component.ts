@@ -1,55 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {AccountService} from '../busineslayer/account.service';
 
 @Component({
   selector: 'app-account-list',
   templateUrl: './account-list.component.html',
   styleUrls: ['./account-list.component.scss']
 })
-export class AccountListComponent implements OnInit {
-  private accountlist:Account[]=[];
+export class AccountListComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+   private accountList: IAccount[];
+   private showAddAccountForm:boolean=false;
+
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
-    let capital:Account={id:"100001",label:"Capital",debit:12055,credit:13205};
-    let immobilisation:Account={id:"200000",label:"Immobilisation",debit:1200,credit:11500};
-    let marchandise:Account={id:"300000",label:"Marchandises",debit:14022,credit:18021};
-
-    this.addAccount(capital);
-    this.addAccount(immobilisation);
-    this.addAccount(marchandise);
+    this.getFromApiAccount();
   }
 
-  addAccount(_account:Account){
-    this.accountlist.push(_account);
-}
+  showForm(){
+    this.showAddAccountForm = !this.showAddAccountForm;
+  }
 
-updateAccount(source:Account,target:Account){
-  let accountToUpdateIndex=this.accountlist.indexOf(source);
-  this.accountlist[accountToUpdateIndex]=target;
-}
+  editAccount(event){
+    console.log(event);
+  }
 
-deleteAccount(i){
-  console.log(`Deleting Account ${i}`);
-}
+  deleteAccount(event){
+    console.log(event);
+  }
 
-add(){
-  let clients:Account={id:"411000",label:"Clients",debit:12556,credit:1002};
-  this.addAccount(clients);
-}
+  ngOnDestroy(): void {
+  }
 
-edit(i){
-  console.log(`Editing Account ${i}`);
-}
-
+  getFromApiAccount() {
+    this.accountService.getAllAccounts().subscribe(data => this.accountList = data);
+  }
 }
 
 
 
 
-interface Account{
-  id?:string
-  label:string
-  debit:number
-  credit:number
+interface IAccount {
+  id?: string;
+  code: string;
+  label: string;
+  total_debit: number;
+  total_credit: number;
 }
