@@ -1,0 +1,22 @@
+
+  body, html {
+    height: 100%;
+  }
+  .bg {
+    /* The image used */
+    background-image: url("http://www.nettrand.co.za/wp-content/uploads/2016/02/36052605-Business-people-discussing-the-charts-and-graphs-showing-the-results-of-their-successful-teamwork-Stock-Photo.jpg") ;
+    
+   background-size: cover;
+
+
+    /* Fixe l'image en haut à gauche de la page */
+ position: fixed; 
+ top:  3.5em;; 
+ left: 0; 
+ /* Préserve le ratio de l'image */
+  
+  min-width: 100%;
+ min-height: 100%;
+  } 
+  
+  
